@@ -2,12 +2,22 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>Historia para Close Friends</title>
 
+
 <style>
+
+/* =========================================
+   BASE
+   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -20,6 +30,7 @@ body {
 }
 
 body {
+
   min-height: 100vh;
 
   font-family:
@@ -32,18 +43,23 @@ body {
   background-color: #eeece1;
 
   background-image: url("fons.png");
+
   background-position: center top;
+
   background-repeat: repeat-y;
+
   background-size: 100% auto;
 }
 
 
-/* =========================
-   CONTENEDOR GENERAL
-   ========================= */
+/* =========================================
+   CONTENEDOR
+   ========================================= */
 
 .container {
+
   width: 100%;
+
   max-width: 1000px;
 
   margin: 0 auto;
@@ -57,14 +73,16 @@ body {
 }
 
 
-/* =========================
+/* =========================================
    LOGO
-   ========================= */
+   ========================================= */
 
 .logo {
+
   display: block;
 
   width: 520px;
+
   max-width: 78%;
 
   height: auto;
@@ -74,14 +92,16 @@ body {
 }
 
 
-/* =========================
+/* =========================================
    FRASE
-   ========================= */
+   ========================================= */
 
 .tagline {
+
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 
   gap: 7px;
@@ -96,11 +116,15 @@ body {
   font-weight: 800;
 }
 
+
 .tagline-text {
+
   color: #222;
 }
 
+
 .tagline-highlight {
+
   background: #58d05c;
 
   color: white;
@@ -115,36 +139,45 @@ body {
 }
 
 
-/* =========================
-   BOTONES
-   ========================= */
+/* =========================================
+   BOTONES PRINCIPALES
+   ========================================= */
 
 #mainButtons {
+
   display: flex;
 
   flex-direction: column;
 
   align-items: center;
 
-  gap: 10px;
+  gap: 12px;
 
   width: 100%;
 }
 
+
 .main-button {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  width: 72%;
-  max-width: 700px;
+  width: 55%;
 
-  min-height: 54px;
+  max-width: 560px;
+
+  height: 58px;
+
+  min-height: 58px;
 
   padding:
-    9px
-    18px;
+    0
+    20px;
+
+  margin: 0;
 
   border: none;
 
@@ -160,51 +193,67 @@ body {
 
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1;
 
   box-shadow:
     0 2px 5px rgba(0,0,0,0.04);
 
   transition:
-    transform 0.15s ease,
-    background-color 0.15s ease;
+    background-color 0.15s ease,
+    transform 0.15s ease;
 }
 
+
 .main-button:hover {
+
   background: #ffffff;
 
   transform: translateY(-1px);
 }
 
 
-/* =========================
+/* =========================================
    BIBLIOGRAFÍA
-   ========================= */
+   ========================================= */
 
 #bibliography {
-  width: 72%;
-  max-width: 700px;
+
+  width: 55%;
+
+  max-width: 560px;
 
   margin:
     0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
 }
 
 
-/* BOTÓN BIBLIOGRAFÍA */
+/* =========================================
+   BOTÓN BIBLIOGRAFÍA
+   ========================================= */
 
 .bibliography-button {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   width: 100%;
 
-  min-height: 54px;
+  height: 58px;
+
+  min-height: 58px;
 
   padding:
-    9px
-    18px;
+    0
+    20px;
 
   margin: 0;
 
@@ -222,7 +271,7 @@ body {
 
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1;
 
   cursor: pointer;
 
@@ -230,30 +279,33 @@ body {
     0 2px 5px rgba(0,0,0,0.04);
 
   transition:
-    transform 0.15s ease,
-    background-color 0.15s ease;
+    background-color 0.15s ease,
+    transform 0.15s ease;
 }
 
+
 .bibliography-button:hover {
+
   background: #ffffff;
 
   transform: translateY(-1px);
 }
 
 
-/* =========================
-   LISTA BIBLIOGRAFÍA
-   ========================= */
+/* =========================================
+   LISTA DESPLEGABLE
+   ========================================= */
 
 .bibliography-list {
+
   display: none;
 
   width: 100%;
 
-  margin-top: 7px;
+  margin: 0;
 
   padding:
-    3px
+    5px
     22px;
 
   background: #fffdfb;
@@ -263,16 +315,19 @@ body {
   text-align: left;
 }
 
+
 .bibliography-list.open {
+
   display: block;
 }
 
 
-/* =========================
-   CADA RECURSO
-   ========================= */
+/* =========================================
+   ELEMENTOS DE LA BIBLIOGRAFÍA
+   ========================================= */
 
 .bibliography-item {
+
   display: flex;
 
   align-items: center;
@@ -304,18 +359,25 @@ body {
     color 0.15s ease;
 }
 
+
 .bibliography-item:last-child {
+
   border-bottom: none;
 }
 
+
 .bibliography-item:hover {
+
   color: #0877ed;
 }
 
 
-/* DOCUMENTO */
+/* =========================================
+   ICONO + NOMBRE
+   ========================================= */
 
 .document {
+
   display: flex;
 
   align-items: center;
@@ -325,22 +387,31 @@ body {
   min-width: 0;
 }
 
+
 .document-icon {
+
   flex-shrink: 0;
 
   font-size: 19px;
 }
 
+
 .document-name {
+
   overflow: hidden;
 
   text-overflow: ellipsis;
+
+  white-space: nowrap;
 }
 
 
-/* FLECHA */
+/* =========================================
+   FLECHA
+   ========================================= */
 
 .arrow {
+
   flex-shrink: 0;
 
   font-size: 24px;
@@ -353,22 +424,27 @@ body {
     color 0.15s ease;
 }
 
+
 .bibliography-item:hover .arrow {
+
   color: #0877ed;
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* =========================================
+   INSTAGRAM
+   ========================================= */
 
 .footer {
+
   margin-top: 25px;
 
   text-align: center;
 }
 
+
 .instagram {
+
   display: inline-block;
 
   padding:
@@ -389,26 +465,32 @@ body {
 }
 
 
-/* =========================
+/* =========================================
    MÓVIL
-   ========================= */
+   ========================================= */
 
 @media (max-width: 600px) {
 
+
   .container {
+
     padding:
       15px
       12px
       30px;
   }
 
+
   .logo {
+
     width: 90%;
 
     max-width: 430px;
   }
 
+
   .tagline {
+
     font-size: 19px;
 
     gap: 5px;
@@ -416,7 +498,9 @@ body {
     margin-bottom: 19px;
   }
 
+
   .tagline-highlight {
+
     padding:
       7px
       11px;
@@ -424,38 +508,67 @@ body {
     border-radius: 10px;
   }
 
+
   #mainButtons {
-    gap: 9px;
+
+    gap: 10px;
   }
 
-  .main-button,
-  .bibliography-button {
-    width: 90%;
 
-    min-height: 51px;
+  .main-button {
+
+    width: 82%;
+
+    height: 52px;
+
+    min-height: 52px;
 
     padding:
-      8px
+      0
       12px;
 
-    border-radius: 18px;
+    border-radius: 17px;
 
     font-size: 20px;
   }
 
+
   #bibliography {
-    width: 90%;
+
+    width: 82%;
+
+    gap: 10px;
   }
 
-  .bibliography-list {
+
+  .bibliography-button {
+
+    height: 52px;
+
+    min-height: 52px;
+
     padding:
-      3px
+      0
+      12px;
+
+    border-radius: 17px;
+
+    font-size: 20px;
+  }
+
+
+  .bibliography-list {
+
+    padding:
+      4px
       14px;
 
     border-radius: 15px;
   }
 
+
   .bibliography-item {
+
     padding:
       12px
       2px;
@@ -463,29 +576,58 @@ body {
     font-size: 16px;
   }
 
+
   .arrow {
+
     font-size: 22px;
   }
 
+
   .instagram {
+
     font-size: 14px;
 
     padding:
       8px
       14px;
   }
+
 }
 
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (
+  min-width: 601px
+) and (
+  max-width: 900px
+) {
+
+  .main-button,
+  #bibliography {
+
+    width: 65%;
+  }
+
+}
+
+
 </style>
+
 </head>
 
 
 <body>
 
+
 <div class="container">
 
 
-  <!-- LOGO -->
+  <!-- ================================
+       LOGO
+       ================================= -->
 
   <img
     class="logo"
@@ -494,7 +636,9 @@ body {
   >
 
 
-  <!-- FRASE -->
+  <!-- ================================
+       FRASE
+       ================================= -->
 
   <div class="tagline">
 
@@ -509,17 +653,23 @@ body {
   </div>
 
 
-  <!-- BOTONES -->
+  <!-- ================================
+       BOTONES PRINCIPALES
+       ================================= -->
 
   <div id="mainButtons"></div>
 
 
-  <!-- BIBLIOGRAFÍA -->
+  <!-- ================================
+       BIBLIOGRAFÍA
+       ================================= -->
 
   <div id="bibliography"></div>
 
 
-  <!-- INSTAGRAM -->
+  <!-- ================================
+       INSTAGRAM
+       ================================= -->
 
   <div class="footer">
 
@@ -536,17 +686,17 @@ body {
 <script>
 
 
-/* ==========================================
+/* =========================================
    GOOGLE SHEETS
-   ========================================== */
+   ========================================= */
 
 const SHEET_URL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vSe9B5yAgd1vKXrHcK-ZezCLKeK4PuJgUHIkX6MBLaSPercQTCdJzCjpv9RR6_bYVP5Xo0C9Smzax5p/pub?gid=0&single=true&output=csv";
 
 
-/* ==========================================
-   ICONOS
-   ========================================== */
+/* =========================================
+   ICONOS DE LOS BOTONES
+   ========================================= */
 
 const icons = {
 
@@ -559,25 +709,27 @@ const icons = {
 };
 
 
-/* ==========================================
+/* =========================================
    LIMPIAR NOMBRES
-   ========================================== */
+   ========================================= */
 
 function cleanName(name) {
 
   return String(name || "")
+
     .replace(
       /^[🎧🔥📹📚📖📄📕📗📘📙\s]+/,
       ""
     )
+
     .trim();
 
 }
 
 
-/* ==========================================
+/* =========================================
    PARSER CSV
-   ========================================== */
+   ========================================= */
 
 function parseCSV(text) {
 
@@ -612,6 +764,7 @@ function parseCSV(text) {
 
     }
 
+
     else if (
       char === '"'
     ) {
@@ -620,6 +773,7 @@ function parseCSV(text) {
         !insideQuotes;
 
     }
+
 
     else if (
       char === "," &&
@@ -632,9 +786,12 @@ function parseCSV(text) {
 
     }
 
+
     else if (
-      (char === "\n" ||
-       char === "\r") &&
+      (
+        char === "\n" ||
+        char === "\r"
+      ) &&
       !insideQuotes
     ) {
 
@@ -642,8 +799,11 @@ function parseCSV(text) {
         char === "\r" &&
         next === "\n"
       ) {
+
         i++;
+
       }
+
 
       row.push(value);
 
@@ -654,6 +814,7 @@ function parseCSV(text) {
       value = "";
 
     }
+
 
     else {
 
@@ -681,28 +842,35 @@ function parseCSV(text) {
 }
 
 
-/* ==========================================
-   CARGAR SHEET
-   ========================================== */
+/* =========================================
+   CARGAR GOOGLE SHEETS
+   ========================================= */
 
 async function loadLinks() {
 
   try {
 
+
     const response =
       await fetch(
-        SHEET_URL + "&t=" + Date.now()
+        SHEET_URL +
+        "&t=" +
+        Date.now()
       );
+
 
     const csv =
       await response.text();
+
 
     const rows =
       parseCSV(csv);
 
 
     if (!rows.length) {
+
       return;
+
     }
 
 
@@ -719,15 +887,22 @@ async function loadLinks() {
 
         const item = {};
 
+
         headers.forEach(
-          (header, index) => {
+          (
+            header,
+            index
+          ) => {
 
             item[header] =
-              (row[index] || "")
-                .trim();
+              (
+                row[index] ||
+                ""
+              ).trim();
 
           }
         );
+
 
         return item;
 
@@ -736,7 +911,9 @@ async function loadLinks() {
 
     renderPage(data);
 
+
   }
+
 
   catch (error) {
 
@@ -750,16 +927,16 @@ async function loadLinks() {
 }
 
 
-/* ==========================================
-   RENDERIZAR
-   ========================================== */
+/* =========================================
+   CONSTRUIR LA PÁGINA
+   ========================================= */
 
 function renderPage(data) {
 
 
-  /* --------------------------------
-     SOLO ACTIVOS
-     -------------------------------- */
+  /* ---------------------------------------
+     SOLO ELEMENTOS ACTIVOS
+     --------------------------------------- */
 
   const active =
     data.filter(item => {
@@ -771,134 +948,204 @@ function renderPage(data) {
     });
 
 
-  /* --------------------------------
-     PRINCIPALES
-     -------------------------------- */
+  /* ---------------------------------------
+     BOTONES PRINCIPALES
+     --------------------------------------- */
 
   const principals =
     active
+
       .filter(item => {
 
+        const type =
+          cleanName(
+            item.Tipo
+          );
+
+        const name =
+          cleanName(
+            item.Nombre
+          );
+
+
         return (
-          cleanName(item.Tipo) ===
-          "Principal" &&
-          cleanName(item.Nombre) !==
-          "Bibliografía"
+
+          type === "Principal" &&
+
+          name !== "Bibliografía"
+
         );
 
       })
+
+
       .sort(
-        (a, b) =>
-          Number(a.Orden || 0) -
-          Number(b.Orden || 0)
+        (
+          a,
+          b
+        ) =>
+          Number(
+            a.Orden || 0
+          ) -
+
+          Number(
+            b.Orden || 0
+          )
       );
 
 
-  /* --------------------------------
+  /* ---------------------------------------
      BIBLIOGRAFÍA
-     -------------------------------- */
+     --------------------------------------- */
 
   const bibliography =
     active
+
       .filter(item => {
 
-        const tipo =
-          cleanName(item.Tipo);
+        const type =
+          cleanName(
+            item.Tipo
+          );
+
 
         return (
-          tipo === "Bibliografia" ||
-          tipo === "Bibliografía"
+
+          type ===
+            "Bibliografia" ||
+
+          type ===
+            "Bibliografía"
+
         );
 
       })
+
+
       .sort(
-        (a, b) =>
-          Number(a.Orden || 0) -
-          Number(b.Orden || 0)
+        (
+          a,
+          b
+        ) =>
+          Number(
+            a.Orden || 0
+          ) -
+
+          Number(
+            b.Orden || 0
+          )
       );
 
 
-  /* =================================
-     BOTONES PRINCIPALES
-     ================================= */
+  /* =======================================
+     CREAR BOTONES PRINCIPALES
+     ======================================= */
 
   const main =
     document.getElementById(
       "mainButtons"
     );
 
+
   main.innerHTML = "";
 
 
-  principals.forEach(item => {
-
-    const name =
-      cleanName(item.Nombre);
-
-    const url =
-      item.URL;
+  principals.forEach(
+    item => {
 
 
-    if (!name || !url) {
-      return;
+      const name =
+        cleanName(
+          item.Nombre
+        );
+
+
+      const url =
+        item.URL;
+
+
+      if (
+        !name ||
+        !url
+      ) {
+
+        return;
+
+      }
+
+
+      const link =
+        document.createElement(
+          "a"
+        );
+
+
+      link.className =
+        "main-button";
+
+
+      link.href =
+        url;
+
+
+      link.target =
+        "_blank";
+
+
+      link.rel =
+        "noopener noreferrer";
+
+
+      const icon =
+        icons[name] || "";
+
+
+      link.textContent =
+        icon
+          ? `${icon} ${name}`
+          : name;
+
+
+      main.appendChild(
+        link
+      );
+
     }
+  );
 
 
-    const link =
-      document.createElement("a");
+  /* =======================================
+     CREAR BIBLIOGRAFÍA
+     ======================================= */
 
-
-    link.className =
-      "main-button";
-
-
-    link.href =
-      url;
-
-
-    link.target =
-      "_blank";
-
-
-    link.rel =
-      "noopener noreferrer";
-
-
-    const icon =
-      icons[name] || "";
-
-
-    link.textContent =
-      icon
-        ? `${icon} ${name}`
-        : name;
-
-
-    main.appendChild(link);
-
-  });
-
-
-  /* =================================
-     BIBLIOGRAFÍA
-     ================================= */
-
-  const container =
+  const bibliographyContainer =
     document.getElementById(
       "bibliography"
     );
 
 
-  /* MUY IMPORTANTE:
-     SOLO SE CREA UN BOTÓN
-     Y UNA LISTA.
+  /*
+     MUY IMPORTANTE:
+
+     Limpiamos completamente
+     el contenedor antes de crear
+     la bibliografía.
+
+     Así nunca puede duplicarse.
   */
 
-  container.innerHTML = "";
+  bibliographyContainer.innerHTML =
+    "";
 
+
+  /* ---------------------------------------
+     BOTÓN
+     --------------------------------------- */
 
   const button =
-    document.createElement("button");
+    document.createElement(
+      "button"
+    );
 
 
   button.type =
@@ -913,81 +1160,107 @@ function renderPage(data) {
     "📚 Bibliografía <span>▼</span>";
 
 
+  /* ---------------------------------------
+     LISTA
+     --------------------------------------- */
+
   const list =
-    document.createElement("div");
+    document.createElement(
+      "div"
+    );
 
 
   list.className =
     "bibliography-list";
 
 
-  bibliography.forEach(item => {
+  /* ---------------------------------------
+     RECURSOS
+     --------------------------------------- */
 
-    const name =
-      cleanName(item.Nombre);
-
-    const url =
-      item.URL;
+  bibliography.forEach(
+    item => {
 
 
-    if (!name || !url) {
-      return;
+      const name =
+        cleanName(
+          item.Nombre
+        );
+
+
+      const url =
+        item.URL;
+
+
+      if (
+        !name ||
+        !url
+      ) {
+
+        return;
+
+      }
+
+
+      const link =
+        document.createElement(
+          "a"
+        );
+
+
+      link.className =
+        "bibliography-item";
+
+
+      link.href =
+        url;
+
+
+      link.target =
+        "_blank";
+
+
+      link.rel =
+        "noopener noreferrer";
+
+
+      link.innerHTML = `
+
+        <span class="document">
+
+          <span class="document-icon">
+            📄
+          </span>
+
+          <span class="document-name">
+            ${name}
+          </span>
+
+        </span>
+
+        <span class="arrow">
+          ↗
+        </span>
+
+      `;
+
+
+      list.appendChild(
+        link
+      );
+
     }
+  );
 
 
-    const link =
-      document.createElement("a");
-
-
-    link.className =
-      "bibliography-item";
-
-
-    link.href =
-      url;
-
-
-    link.target =
-      "_blank";
-
-
-    link.rel =
-      "noopener noreferrer";
-
-
-    link.innerHTML = `
-
-      <span class="document">
-
-        <span class="document-icon">
-          📄
-        </span>
-
-        <span class="document-name">
-          ${name}
-        </span>
-
-      </span>
-
-      <span class="arrow">
-        ↗
-      </span>
-
-    `;
-
-
-    list.appendChild(link);
-
-  });
-
-
-  /* =================================
+  /* ---------------------------------------
      ABRIR / CERRAR
-     ================================= */
+     --------------------------------------- */
 
   button.addEventListener(
     "click",
     () => {
+
 
       const isOpen =
         list.classList.toggle(
@@ -997,31 +1270,43 @@ function renderPage(data) {
 
       button.innerHTML =
         isOpen
+
           ? "📚 Bibliografía <span>▲</span>"
+
           : "📚 Bibliografía <span>▼</span>";
 
     }
   );
 
 
-  container.appendChild(
+  /* ---------------------------------------
+     INSERTAR
+
+     SOLO UNA VEZ
+     --------------------------------------- */
+
+  bibliographyContainer.appendChild(
     button
   );
 
-  container.appendChild(
+
+  bibliographyContainer.appendChild(
     list
   );
 
 }
 
 
-/* ==========================================
-   ARRANCAR
-   ========================================== */
+/* =========================================
+   INICIAR
+   ========================================= */
 
 loadLinks();
 
+
 </script>
 
+
 </body>
+
 </html>
