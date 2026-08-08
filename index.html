@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <title>Historia para Close Friends</title>
@@ -24,7 +26,7 @@
 
     body {
       margin: 0;
-      padding: 40px 20px 50px;
+      padding: 0;
 
       min-height: 100vh;
 
@@ -33,7 +35,7 @@
         Helvetica,
         sans-serif;
 
-      color: #222;
+      color: #242424;
 
       background-color: #f4f0e8;
 
@@ -41,31 +43,30 @@
 
       background-repeat: no-repeat;
 
-      background-position: center top;
+      background-position:
+        center top;
 
-      background-size: cover;
+      background-size:
+        cover;
 
-      background-attachment: fixed;
+      background-attachment:
+        fixed;
     }
 
 
     /* =========================
-       CONTENEDOR
+       CONTENEDOR PRINCIPAL
        ========================= */
 
-    .container {
-
+    .page {
       width: 100%;
 
-      max-width: 900px;
+      max-width: 920px;
 
       margin: 0 auto;
 
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
+      padding:
+        55px 25px 45px;
     }
 
 
@@ -74,14 +75,14 @@
        ========================= */
 
     .logo {
-
       display: block;
 
-      width: min(560px, 90vw);
+      width: min(520px, 82vw);
 
       height: auto;
 
-      margin: 0 auto 18px;
+      margin:
+        0 auto 30px;
     }
 
 
@@ -90,92 +91,61 @@
        ========================= */
 
     .tagline {
-
       display: flex;
-
-      align-items: center;
 
       justify-content: center;
 
-      flex-wrap: wrap;
+      align-items: center;
 
       gap: 10px;
 
-      margin: 0 auto 35px;
+      flex-wrap: wrap;
 
-      font-size: clamp(25px, 4vw, 42px);
+      margin-bottom: 35px;
+
+      font-size: clamp(
+        25px,
+        4vw,
+        40px
+      );
 
       font-weight: 800;
 
       line-height: 1.1;
-
-      text-align: center;
     }
-
 
     .tagline span {
 
       display: inline-block;
 
-      padding: 10px 20px;
+      padding:
+        9px 20px;
 
-      border-radius: 14px;
+      border-radius: 15px;
 
       background: #62CE61;
 
       color: white;
-
-      font-weight: 800;
 
       white-space: nowrap;
     }
 
 
     /* =========================
-       BOTONES
+       BOTONES PRINCIPALES
        ========================= */
 
     #mainButtons {
-
-      width: 100%;
 
       display: flex;
 
       flex-direction: column;
 
-      align-items: center;
-
-      gap: 18px;
-
-      margin-bottom: 18px;
+      gap: 16px;
     }
 
 
     .main-button {
-
-      width: min(820px, 94vw);
-
-      min-height: 82px;
-
-      padding: 18px 25px;
-
-      border: none;
-
-      border-radius: 28px;
-
-      background: rgba(255, 253, 250, 0.96);
-
-      color: #222;
-
-      font-family: inherit;
-
-      font-size: clamp(22px, 3vw, 31px);
-
-      font-weight: 800;
-
-      text-align: center;
-
-      text-decoration: none;
 
       display: flex;
 
@@ -183,25 +153,79 @@
 
       justify-content: center;
 
+      width: 100%;
+
+      min-height: 82px;
+
+      padding:
+        18px 25px;
+
+      border: none;
+
+      border-radius: 24px;
+
+      background: rgba(
+        255,
+        253,
+        250,
+        0.96
+      );
+
+      color: #242424;
+
+      font-size: clamp(
+        22px,
+        3vw,
+        31px
+      );
+
+      font-weight: 800;
+
+      text-decoration: none;
+
       cursor: pointer;
+
+      box-shadow:
+        0 4px 0 rgba(
+          0,
+          0,
+          0,
+          0.04
+        );
 
       transition:
         transform 0.15s ease,
-        background-color 0.15s ease;
+        box-shadow 0.15s ease;
     }
 
 
     .main-button:hover {
 
-      transform: scale(1.015);
+      transform:
+        translateY(-2px);
 
-      background: white;
+      box-shadow:
+        0 7px 14px rgba(
+          0,
+          0,
+          0,
+          0.08
+        );
     }
 
 
     .main-button:active {
 
-      transform: scale(0.985);
+      transform:
+        translateY(1px);
+
+      box-shadow:
+        0 2px 4px rgba(
+          0,
+          0,
+          0,
+          0.05
+        );
     }
 
 
@@ -211,9 +235,7 @@
 
     .bibliography-wrapper {
 
-      width: min(820px, 94vw);
-
-      margin-top: 0;
+      margin-top: 16px;
     }
 
 
@@ -223,66 +245,38 @@
 
       min-height: 82px;
 
-      padding: 18px 25px;
-
       border: none;
 
-      border-radius: 28px;
+      border-radius: 24px;
 
-      background: rgba(255, 253, 250, 0.96);
+      background: rgba(
+        255,
+        253,
+        250,
+        0.96
+      );
 
-      color: #222;
+      color: #242424;
 
-      font-family: inherit;
-
-      font-size: clamp(22px, 3vw, 31px);
+      font-size: clamp(
+        22px,
+        3vw,
+        31px
+      );
 
       font-weight: 800;
 
       cursor: pointer;
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 10px;
-
       transition:
-        transform 0.15s ease,
-        background-color 0.15s ease;
+        transform 0.15s ease;
     }
 
 
     .bibliography-button:hover {
 
-      transform: scale(1.015);
-
-      background: white;
-    }
-
-
-    .bibliography-button:active {
-
-      transform: scale(0.985);
-    }
-
-
-    .bibliography-arrow {
-
-      display: inline-block;
-
-      font-size: 0.8em;
-
-      transition: transform 0.2s ease;
-    }
-
-
-    .bibliography-button.open
-    .bibliography-arrow {
-
-      transform: rotate(180deg);
+      transform:
+        translateY(-2px);
     }
 
 
@@ -290,15 +284,21 @@
 
       display: none;
 
-      width: 100%;
+      margin-top: 10px;
 
-      margin-top: 12px;
+      padding:
+        8px 25px;
 
-      padding: 18px;
+      border-radius: 24px;
 
-      border-radius: 22px;
+      background: rgba(
+        255,
+        253,
+        250,
+        0.96
+      );
 
-      background: rgba(255, 253, 250, 0.96);
+      overflow: hidden;
     }
 
 
@@ -308,69 +308,61 @@
     }
 
 
-    .bibliography-link {
+    .bibliography-item {
 
-      display: block;
+      display: flex;
 
-      padding: 14px 10px;
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding:
+        18px 0;
+
+      border-bottom:
+        1px dashed #f2b4c8;
 
       color: #0072F2;
 
-      font-size: 18px;
+      font-size: 19px;
 
       font-weight: 700;
 
       text-decoration: none;
-
-      border-bottom: 1px solid #e5e5e5;
     }
 
 
-    .bibliography-link:last-child {
+    .bibliography-item:last-child {
 
       border-bottom: none;
     }
 
 
-    .bibliography-link:hover {
+    .bibliography-item:hover {
 
-      text-decoration: underline;
+      color: #005dcc;
     }
 
 
-    /* =========================
-       MENSAJE DE CARGA / ERROR
-       ========================= */
+    .bibliography-name {
 
-    .loading {
+      display: flex;
 
-      width: min(820px, 94vw);
+      align-items: center;
 
-      padding: 25px;
-
-      text-align: center;
-
-      font-size: 18px;
-
-      color: #555;
+      gap: 12px;
     }
 
 
-    .error {
+    .bibliography-arrow {
 
-      width: min(820px, 94vw);
+      font-size: 26px;
 
-      padding: 20px;
+      color: #242424;
 
-      border-radius: 20px;
-
-      background: #fff;
-
-      color: #c0392b;
-
-      text-align: center;
-
-      font-weight: 700;
+      flex-shrink: 0;
     }
 
 
@@ -380,11 +372,11 @@
 
     .footer {
 
-      margin-top: 38px;
-
       display: flex;
 
       justify-content: center;
+
+      margin-top: 35px;
     }
 
 
@@ -392,19 +384,18 @@
 
       display: inline-block;
 
-      padding: 13px 28px;
+      padding:
+        13px 28px;
 
-      border-radius: 16px;
+      border-radius: 15px;
 
-      background: #88C8FF;
+      background: #f2b1c9;
 
-      color: #0072F2;
+      color: #242424;
 
-      font-size: clamp(17px, 2.5vw, 23px);
+      font-size: 20px;
 
       font-weight: 800;
-
-      text-align: center;
 
       text-decoration: none;
     }
@@ -416,33 +407,26 @@
 
     @media (max-width: 600px) {
 
-      body {
+      .page {
 
         padding:
-          24px
-          14px
-          35px;
-
-        background-attachment: scroll;
-
-        background-position: center top;
-
+          30px 16px 35px;
       }
 
 
       .logo {
 
-        width: min(500px, 96vw);
+        width: 88vw;
 
-        margin-bottom: 12px;
+        margin-bottom: 22px;
       }
 
 
       .tagline {
 
-        margin-bottom: 25px;
-
         gap: 7px;
+
+        margin-bottom: 25px;
 
         font-size: 25px;
       }
@@ -450,149 +434,134 @@
 
       .tagline span {
 
-        padding: 8px 14px;
+        padding:
+          7px 15px;
 
-        border-radius: 11px;
+        border-radius: 12px;
       }
 
 
       #mainButtons {
 
-        gap: 13px;
-
-        margin-bottom: 13px;
+        gap: 12px;
       }
 
 
       .main-button,
       .bibliography-button {
 
-        width: 94vw;
+        min-height: 68px;
 
-        min-height: 66px;
+        border-radius: 20px;
 
-        padding: 14px 18px;
+        padding:
+          14px 18px;
 
-        border-radius: 22px;
+        font-size: 22px;
+      }
 
-        font-size: 21px;
+
+      .bibliography-wrapper {
+
+        margin-top: 12px;
       }
 
 
       .bibliography-content {
 
-        padding: 12px;
+        padding:
+          5px 18px;
 
-        border-radius: 18px;
+        border-radius: 20px;
       }
 
 
-      .bibliography-link {
+      .bibliography-item {
 
-        font-size: 16px;
+        padding:
+          15px 0;
 
-        padding: 13px 8px;
-      }
-
-
-      .footer {
-
-        margin-top: 28px;
+        font-size: 17px;
       }
 
 
       .instagram {
 
-        padding: 11px 20px;
-
-        border-radius: 14px;
-
         font-size: 16px;
+
+        padding:
+          11px 20px;
       }
 
     }
 
+
   </style>
+
 </head>
 
 
 <body>
 
-  <div class="container">
+
+  <main class="page">
 
 
-    <!-- =========================
-         LOGO
-         ========================= -->
+    <!-- LOGO -->
 
     <img
-      id="logo"
+      src="Recurso 1.png"
       class="logo"
-      src="Recurso%201.png"
       alt="Historia para Close Friends"
     >
 
 
-    <!-- =========================
-         FRASE
-         ========================= -->
+    <!-- FRASE -->
 
     <div class="tagline">
 
-      <span>Aprende historia</span>
+      <span style="
+        background: transparent;
+        color: #242424;
+        padding: 0;
+      ">
+        Aprende historia
+      </span>
 
-      <span>sin turra</span>
-
-    </div>
-
-
-    <!-- =========================
-         BOTONES PRINCIPALES
-         ========================= -->
-
-    <div id="mainButtons">
-
-      <div class="loading">
-        Cargando...
-      </div>
+      <span>
+        sin turra
+      </span>
 
     </div>
 
 
-    <!-- =========================
-         BIBLIOGRAFÍA
-         ========================= -->
+    <!-- BOTONES -->
 
-    <div
-      id="bibliography"
-      class="bibliography-wrapper"
-      style="display:none;"
-    >
+    <div id="mainButtons"></div>
+
+
+    <!-- BIBLIOGRAFÍA -->
+
+    <div class="bibliography-wrapper">
 
       <button
-        id="bibliographyButton"
         class="bibliography-button"
-        type="button"
+        id="bibliographyButton"
+        onclick="toggleBibliography()"
       >
-
-        <span>📚 Bibliografía</span>
-
-        <span class="bibliography-arrow">▼</span>
-
+        📚 Bibliografía ▼
       </button>
 
 
       <div
-        id="bibliographyContent"
         class="bibliography-content"
+        id="bibliographyContent"
       ></div>
 
     </div>
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+    <!-- FOOTER -->
 
     <div class="footer">
 
@@ -605,54 +574,48 @@
     </div>
 
 
-  </div>
+  </main>
 
 
   <script>
 
-    /* =========================================================
-       GOOGLE SHEETS
-       ========================================================= */
+    /*
+     * GOOGLE SHEETS
+     *
+     * Esta URL corresponde al CSV público
+     * de tu hoja de Google Sheets.
+     */
 
     const SHEET_URL =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vSe9B5yAgd1vKXrHcK-ZezCLKeK4PuJgUHIkX6MBLaSPercQTCdJzCjpv9RR6_bYVP5Xo0C9Smzax5p/pub?gid=0&single=true&output=csv";
 
 
-    /* =========================================================
-       ELEMENTOS
-       ========================================================= */
+    /*
+     * ICONOS DE LOS BOTONES
+     */
 
-    const mainButtons =
-      document.getElementById("mainButtons");
+    const buttonIcons = {
 
-    const bibliography =
-      document.getElementById("bibliography");
+      podcast: "🎧",
 
-    const bibliographyButton =
-      document.getElementById("bibliographyButton");
+      escuchar: "🎧",
 
-    const bibliographyContent =
-      document.getElementById("bibliographyContent");
+      ultimo: "🔥",
 
+      episodio: "🔥",
 
-    /* =========================================================
-       ESCAPAR HTML
-       ========================================================= */
+      youtube: "📹",
 
-    function escapeHTML(value) {
+      bibliografia: "📚",
 
-      return String(value || "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
+      "bibliografía": "📚"
+
+    };
 
 
-    /* =========================================================
-       CSV PARSER
-       ========================================================= */
+    /*
+     * CONVIERTE UNA FILA CSV EN OBJETO
+     */
 
     function parseCSV(text) {
 
@@ -665,48 +628,60 @@
       let insideQuotes = false;
 
 
-      for (let i = 0; i < text.length; i++) {
+      for (
+        let i = 0;
+        i < text.length;
+        i++
+      ) {
 
         const char = text[i];
 
-        const next = text[i + 1];
+        const next =
+          text[i + 1];
 
 
-        if (char === '"' && insideQuotes && next === '"') {
+        if (
+          char === '"' &&
+          insideQuotes &&
+          next === '"'
+        ) {
 
           value += '"';
 
           i++;
 
-          continue;
         }
 
+        else if (
+          char === '"'
+        ) {
 
-        if (char === '"') {
+          insideQuotes =
+            !insideQuotes;
 
-          insideQuotes = !insideQuotes;
-
-          continue;
         }
 
-
-        if (char === "," && !insideQuotes) {
+        else if (
+          char === "," &&
+          !insideQuotes
+        ) {
 
           row.push(value);
 
           value = "";
 
-          continue;
         }
 
-
-        if (
-          (char === "\n" || char === "\r") &&
+        else if (
+          (char === "\n" ||
+           char === "\r") &&
           !insideQuotes
         ) {
 
-          if (char === "\r" && next === "\n") {
-
+          if (
+            char === "\r" &&
+            next === "\n"
+          ) {
             i++;
           }
 
@@ -718,62 +693,67 @@
 
           value = "";
 
-          continue;
         }
 
+        else {
 
-        value += char;
+          value += char;
+
+        }
+
       }
 
 
-      if (value !== "" || row.length > 0) {
+      if (
+        value !== "" ||
+        row.length > 0
+      ) {
 
         row.push(value);
 
         rows.push(row);
+
       }
 
 
       return rows;
+
     }
 
 
-    /* =========================================================
-       NORMALIZAR TEXTO
-       ========================================================= */
+    /*
+     * LIMPIAR TEXTO
+     */
 
-    function normalize(value) {
+    function clean(value) {
 
-      return String(value || "")
-        .trim()
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+      return String(
+        value || ""
+      )
+      .trim()
+      .replace(/^"|"$/g, "");
+
     }
 
 
-    /* =========================================================
-       CARGAR ENLACES
-       ========================================================= */
+    /*
+     * CARGAR DATOS DEL SHEET
+     */
 
     async function loadLinks() {
 
       try {
 
         const response =
-          await fetch(
-            SHEET_URL + "&_=" + Date.now(),
-            {
-              cache: "no-store"
-            }
-          );
+          await fetch(SHEET_URL);
 
 
         if (!response.ok) {
 
           throw new Error(
-            "No se ha podido cargar la hoja."
+            "No se pudo cargar Google Sheets."
           );
+
         }
 
 
@@ -785,263 +765,471 @@
           parseCSV(csv);
 
 
-        if (rows.length < 2) {
+        if (
+          rows.length < 2
+        ) {
 
-          throw new Error(
-            "La hoja no contiene enlaces."
-          );
+          return;
+
         }
 
 
         /*
-         * Columnas esperadas:
-         *
-         * 0 = tipo
-         * 1 = nombre
-         * 2 = url
-         * 3 = activo
-         * 4 = orden
+         * Primera fila =
+         * encabezados
          */
+
+        const headers =
+          rows.shift()
+          .map(
+            header =>
+              clean(header)
+              .toLowerCase()
+          );
+
+
+        const tipoIndex =
+          headers.indexOf("tipo");
+
+        const nombreIndex =
+          headers.indexOf("nombre");
+
+        const urlIndex =
+          headers.indexOf("url");
+
+        const activoIndex =
+          headers.indexOf("activo");
+
+        const ordenIndex =
+          headers.indexOf("orden");
 
 
         const links =
           rows
-            .slice(1)
-            .filter(row =>
-              row[0] &&
-              row[2]
-            )
-            .map(row => ({
-
-              tipo:
-                String(row[0]).trim(),
-
-              nombre:
-                String(row[1] || "").trim(),
-
-              url:
-                String(row[2] || "").trim(),
-
-              activo:
-                normalize(row[3]) === "true" ||
-                normalize(row[3]) === "si" ||
-                normalize(row[3]) === "1",
-
-              orden:
-                Number(row[4]) || 0
-
-            }))
-            .filter(link =>
-              link.activo &&
-              link.url
-            )
-            .sort((a, b) =>
-              a.orden - b.orden
-            );
-
-
-        renderLinks(links);
-
-      } catch (error) {
-
-        console.error(error);
-
-
-        mainButtons.innerHTML = `
-
-          <div class="error">
-
-            No se han podido cargar los enlaces.
-
-          </div>
-
-        `;
-      }
-    }
-
-
-    /* =========================================================
-       CREAR BOTÓN
-       ========================================================= */
-
-    function createButton(link) {
-
-      const a =
-        document.createElement("a");
-
-
-      a.className =
-        "main-button";
-
-
-      a.href =
-        link.url;
-
-
-      a.target =
-        "_blank";
-
-
-      a.rel =
-        "noopener noreferrer";
-
-
-      a.textContent =
-        link.nombre;
-
-
-      return a;
-    }
-
-
-    /* =========================================================
-       IDENTIFICAR BIBLIOGRAFÍA
-       ========================================================= */
-
-    function isBibliography(link) {
-
-      const type =
-        normalize(link.tipo);
-
-
-      return (
-        type.includes("bibliograf") ||
-        type.includes("fuente") ||
-        type.includes("libro") ||
-        type.includes("referencia")
-      );
-    }
-
-
-    /* =========================================================
-       RENDERIZAR ENLACES
-       ========================================================= */
-
-    function renderLinks(links) {
-
-      mainButtons.innerHTML = "";
-
-      bibliographyContent.innerHTML = "";
-
-
-      const mainLinks =
-        links.filter(link =>
-          !isBibliography(link)
-        );
-
-
-      const bibliographyLinks =
-        links.filter(link =>
-          isBibliography(link)
-        );
-
-
-      /*
-       * BOTONES PRINCIPALES
-       */
-
-      mainLinks.forEach(link => {
-
-        const button =
-          createButton(link);
-
-        mainButtons.appendChild(
-          button
-        );
-
-      });
-
-
-      /*
-       * BIBLIOGRAFÍA
-       */
-
-      bibliographyLinks.forEach(link => {
-
-        const a =
-          document.createElement("a");
-
-
-        a.className =
-          "bibliography-link";
-
-
-        a.href =
-          link.url;
-
-
-        a.target =
-          "_blank";
-
-
-        a.rel =
-          "noopener noreferrer";
-
-
-        a.textContent =
-          link.nombre;
-
-
-        bibliographyContent.appendChild(
-          a
-        );
-
-      });
-
-
-      /*
-       * Si hay bibliografía,
-       * mostramos el botón.
-       */
-
-      if (bibliographyLinks.length > 0) {
-
-        bibliography.style.display =
-          "block";
-
-      } else {
-
-        bibliography.style.display =
-          "none";
-      }
-
-    }
-
-
-    /* =========================================================
-       ABRIR / CERRAR BIBLIOGRAFÍA
-       ========================================================= */
-
-    bibliographyButton.addEventListener(
-      "click",
-      function() {
-
-        const isOpen =
-          bibliographyContent.classList.contains(
-            "open"
+          .map(row => ({
+
+            tipo:
+              clean(
+                row[tipoIndex]
+              ),
+
+            nombre:
+              clean(
+                row[nombreIndex]
+              ),
+
+            url:
+              clean(
+                row[urlIndex]
+              ),
+
+            activo:
+              clean(
+                row[activoIndex]
+              ).toUpperCase()
+              === "TRUE",
+
+            orden:
+              Number(
+                clean(
+                  row[ordenIndex]
+                )
+              ) || 0
+
+          }))
+          .filter(
+            item =>
+              item.nombre &&
+              item.url &&
+              item.activo
           );
 
 
-        bibliographyContent.classList.toggle(
-          "open"
+        links.sort(
+          (a, b) =>
+            a.orden - b.orden
         );
 
 
-        bibliographyButton.classList.toggle(
-          "open"
+        renderButtons(
+          links
+        );
+
+
+        renderBibliography(
+          links
         );
 
       }
-    );
+
+      catch (error) {
+
+        console.error(
+          error
+        );
+
+        /*
+         * Si el Sheet falla,
+         * dejamos los botones
+         * básicos visibles.
+         */
+
+        renderFallbackButtons();
+
+      }
+
+    }
 
 
-    /* =========================================================
-       INICIAR
-       ========================================================= */
+    /*
+     * NORMALIZAR TIPO
+     */
+
+    function normalizeType(
+      type
+    ) {
+
+      return String(
+        type || ""
+      )
+      .toLowerCase()
+      .normalize(
+        "NFD"
+      )
+      .replace(
+        /[\u0300-\u036f]/g,
+        ""
+      )
+      .trim();
+
+    }
+
+
+    /*
+     * CREAR BOTONES PRINCIPALES
+     */
+
+    function renderButtons(
+      links
+    ) {
+
+      const container =
+        document.getElementById(
+          "mainButtons"
+        );
+
+
+      /*
+       * Tipos que NO son
+       * bibliografía.
+       */
+
+      const mainLinks =
+        links.filter(
+          item => {
+
+            const type =
+              normalizeType(
+                item.tipo
+              );
+
+            return (
+              type !==
+                "bibliografia"
+            );
+
+          }
+        );
+
+
+      /*
+       * Evitamos mostrar
+       * infinitos enlaces como
+       * botones principales.
+       *
+       * El orden lo controla
+       * la columna ORDEN.
+       */
+
+      mainLinks
+      .slice(0, 3)
+      .forEach(
+        link => {
+
+          const button =
+            document.createElement(
+              "a"
+            );
+
+
+          const type =
+            normalizeType(
+              link.tipo
+            );
+
+
+          let icon =
+            "🔗";
+
+
+          if (
+            buttonIcons[type]
+          ) {
+
+            icon =
+              buttonIcons[type];
+
+          }
+
+
+          button.className =
+            "main-button";
+
+
+          button.href =
+            link.url;
+
+
+          button.target =
+            "_blank";
+
+
+          button.rel =
+            "noopener noreferrer";
+
+
+          button.textContent =
+            `${icon} ${link.nombre}`;
+
+
+          container.appendChild(
+            button
+          );
+
+        }
+      );
+
+    }
+
+
+    /*
+     * BIBLIOGRAFÍA
+     */
+
+    function renderBibliography(
+      links
+    ) {
+
+      const container =
+        document.getElementById(
+          "bibliographyContent"
+        );
+
+
+      const bibliography =
+        links.filter(
+          item => {
+
+            const type =
+              normalizeType(
+                item.tipo
+              );
+
+            return (
+              type ===
+              "bibliografia"
+            );
+
+          }
+        );
+
+
+      bibliography.forEach(
+        link => {
+
+          const item =
+            document.createElement(
+              "a"
+            );
+
+
+          item.className =
+            "bibliography-item";
+
+
+          item.href =
+            link.url;
+
+
+          item.target =
+            "_blank";
+
+
+          item.rel =
+            "noopener noreferrer";
+
+
+          item.innerHTML = `
+
+            <span class="bibliography-name">
+
+              📄
+
+              <span>
+                ${escapeHTML(
+                  link.nombre
+                )}
+              </span>
+
+            </span>
+
+            <span class="bibliography-arrow">
+              ↗
+            </span>
+
+          `;
+
+
+          container.appendChild(
+            item
+          );
+
+        }
+      );
+
+    }
+
+
+    /*
+     * ABRIR / CERRAR BIBLIOGRAFÍA
+     */
+
+    function toggleBibliography() {
+
+      const content =
+        document.getElementById(
+          "bibliographyContent"
+        );
+
+
+      const button =
+        document.getElementById(
+          "bibliographyButton"
+        );
+
+
+      const isOpen =
+        content.classList
+        .contains("open");
+
+
+      if (isOpen) {
+
+        content.classList
+          .remove("open");
+
+        button.textContent =
+          "📚 Bibliografía ▼";
+
+      }
+
+      else {
+
+        content.classList
+          .add("open");
+
+        button.textContent =
+          "📚 Bibliografía ▲";
+
+      }
+
+    }
+
+
+    /*
+     * BOTONES DE SEGURIDAD
+     * POR SI GOOGLE SHEETS
+     * FALLA
+     */
+
+    function renderFallbackButtons() {
+
+      const container =
+        document.getElementById(
+          "mainButtons"
+        );
+
+
+      container.innerHTML = `
+
+        <a
+          class="main-button"
+          href="#"
+        >
+          🎧 ¡Escúchalo ya!
+        </a>
+
+        <a
+          class="main-button"
+          href="#"
+        >
+          🔥 Último episodio
+        </a>
+
+        <a
+          class="main-button"
+          href="#"
+        >
+          📹 YouTube
+        </a>
+
+      `;
+
+    }
+
+
+    /*
+     * SEGURIDAD PARA TEXTO
+     */
+
+    function escapeHTML(
+      text
+    ) {
+
+      return String(text)
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+        .replace(
+          /</g,
+          "&lt;"
+        )
+        .replace(
+          />/g,
+          "&gt;"
+        )
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+        .replace(
+          /'/g,
+          "&#039;"
+        );
+
+    }
+
+
+    /*
+     * ARRANCAR
+     */
 
     loadLinks();
 
   </script>
 
+
 </body>
+
 </html>
